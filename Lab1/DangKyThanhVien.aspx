@@ -25,9 +25,9 @@
                 <tr>
                     <td class="auto-style4">Tên Đăng Nhập</td>
                     <td class="auto-style4">
-                        <asp:TextBox ID="txtTenDn" runat="server" CssClass="form-control"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvTendn" runat="server" ErrorMessage="Tên Đăng Nhập Không Được Rỗng" ControlToValidate="txtTenDn" ForeColor="Red">(*)</asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="revTendn" runat="server" ErrorMessage="Tên Đăng Nhập Không Hợp Lệ" ValidationExpression="[\d|\w|!|&|_]{8}[\d|\w|!|&|_]+" ControlToValidate="txtTenDn" ForeColor="Red">(*)</asp:RegularExpressionValidator>
+                        <asp:TextBox ID="txtTenDn" runat="server" CssClass="form-control" MaxLength="16"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvTendn" runat="server" ErrorMessage="Tên Đăng Nhập Không Được Rỗng" ControlToValidate="txtTenDn" ForeColor="Red" Display="Dynamic">(*)</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revTendn" runat="server" ErrorMessage="Tên Đăng Nhập Không Hợp Lệ" ValidationExpression="[\d|\w|!|&|_]{8}[\d|\w|!|&|_]+" ControlToValidate="txtTenDn" ForeColor="Red" Display="Dynamic">(*)</asp:RegularExpressionValidator>
                     </td>
                     <td style="vertical-align: top;" rowspan="12">
                         <asp:Label ID="lbKetQua" runat="server" ForeColor="#CC00FF"></asp:Label>
@@ -57,7 +57,7 @@
                     <td>Họ Tên Khách Hàng</td>
                     <td>
                         <asp:TextBox ID="txtHoTen" runat="server" CssClass="form-control"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Họ tên không được rỗng" ControlToValidate="txtHoTen" ForeColor="#FF0066">(*)</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvHoTen" runat="server" ErrorMessage="Họ tên không được rỗng" ControlToValidate="txtHoTen" ForeColor="#FF0066">(*)</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -105,7 +105,7 @@
                 <tr>
                     <td class="auto-style5">Điện Thoại</td>
                     <td class="auto-style5">
-                        <asp:TextBox ID="txtDienThoai" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtDienThoai" runat="server" CssClass="form-control"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>

@@ -29,7 +29,7 @@ namespace Lab1
                 ddlThang.Items.Add(new ListItem(i.ToString(), i.ToString()));
             }
             ddlNam.Items.Add(new ListItem("--chọn năm--", ""));
-            for (int i = 2010; i >= 1900 ; i--)
+            for (int i = 2010; i >= 1950 ; i--)
             {
                 ddlNam.Items.Add(new ListItem(i.ToString(), i.ToString()));
             }
@@ -45,6 +45,7 @@ namespace Lab1
             string gioitinh = ckGT.Checked == true ? "<em>Nam</em>" : "<em>Nữ</em>";
             kq += $"<li> Giới tính: {gioitinh}";
             kq += $"<li> Email: <em>{txtEmail.Text}</em>";
+            kq += $"<li> Thu Nhập: <em>{txtThuNhap.Text}</em>";
             kq += $"<li> Địa chỉ: <em>{txtDiaChi.Text}</em>";
             kq += $"<li> Điện thoại: <em>{txtDienThoai.Text}</em>";
             kq += "</ul>";
